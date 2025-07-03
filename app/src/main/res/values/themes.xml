@@ -1,9 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Chapter13_java" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Base.Theme.rx_room" parent="Theme.Material3.DayNight.NoActionBar">
+<!--                <item name="colorPrimary">@color/blue_700</item>-->
+        <item name="toolbarStyle">@style/MyToolbarCustom</item>
+        <item name="android:statusBarColor">@color/blue_700</item>
+<!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+<!--        <item name="android:windowIsTranslucent">false</item>-->
     </style>
 
-    <style name="Theme.Chapter13_java" parent="Base.Theme.Chapter13_java" />
+    <style name="MyToolbarCustom" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/blue_600</item>
+    </style>
+
+    <style name="Theme.rx_room" parent="Base.Theme.rx_room">
+    </style>
 </resources>

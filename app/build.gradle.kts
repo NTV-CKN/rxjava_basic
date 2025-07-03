@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.chapter13_java"
-    compileSdk = 34
+    namespace = "com.example.rxjava_java"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.chapter13_java"
-        minSdk = 27
+        applicationId = "com.example.rxjava_java"
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -25,6 +25,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -32,6 +35,16 @@ android {
 }
 
 dependencies {
+    //ImagePicker
+    implementation (libs.imagepicker)
+
+    // room database
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+    // room support rxjava3
+    implementation(libs.room.rxjava3)
+    // rxjava3
+    implementation(libs.rxandroid)
 
     implementation(libs.appcompat)
     implementation(libs.material)

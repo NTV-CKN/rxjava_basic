@@ -1,4 +1,4 @@
-package com.example.chapter13_java;
+package com.example.rxjava_java;
 
 import org.junit.Test;
 

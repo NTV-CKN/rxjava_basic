@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        maven { url = uri("https://jitpack.io") }
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -19,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Chapter13_java"
+rootProject.name = "rxjava_java"
 include(":app")
  
