@@ -1,4 +1,4 @@
-package com.example.rxjava_java.data.dao;
+package com.example.rxjava_java.data.source.local.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.rxjava_java.data.model.User;
+import com.example.rxjava_java.data.source.local.model.User;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public interface UserDao {
     Completable deleteUser(User user);
 
     @Update
-    Single<Integer> updateUser(User user);
+    Completable updateUser(User user);
 
     @Query(
             "select * from users where id = :id"
@@ -37,7 +37,12 @@ public interface UserDao {
     Flowable<List<User>> getAllUser();
 
     @Query(
-            "select * from users where full_name like '%' + :keyName + '%' "
+            "select * from users where full_name like '%' || :keyName || '%' "
     )
     Observable<List<User>> findUserByFullName(String keyName);
+
+    @Query(
+            "select * from users where email = :email"
+    )
+    Single<User> findUserByEmail(String email);
 }

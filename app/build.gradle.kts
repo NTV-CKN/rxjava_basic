@@ -35,14 +35,19 @@ android {
 }
 
 dependencies {
+    //glide
+    implementation (libs.glide)
+
     //ImagePicker
     implementation (libs.imagepicker)
 
     // room database
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
+
     // room support rxjava3
     implementation(libs.room.rxjava3)
+
     // rxjava3
     implementation(libs.rxandroid)
 

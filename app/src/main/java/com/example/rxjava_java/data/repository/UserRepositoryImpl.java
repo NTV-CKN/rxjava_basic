@@ -1,13 +1,14 @@
 package com.example.rxjava_java.data.repository;
 
-import com.example.rxjava_java.data.dao.UserDao;
-import com.example.rxjava_java.data.model.User;
+import com.example.rxjava_java.data.source.local.dao.UserDao;
+import com.example.rxjava_java.data.source.local.model.User;
 
 import java.util.List;
 
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.Single;
 
 public class UserRepositoryImpl extends UserUpdateRepositoryImpl implements IUserRepository {
     public UserRepositoryImpl(UserDao userDao) {
@@ -32,5 +33,10 @@ public class UserRepositoryImpl extends UserUpdateRepositoryImpl implements IUse
     @Override
     public Completable insertUser(User user) {
         return userDao.insertUser(user);
+    }
+
+    @Override
+    public Single<User> findUserByEmail(String email) {
+        return userDao.findUserByEmail(email);
     }
 }

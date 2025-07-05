@@ -1,5 +1,6 @@
-package com.example.rxjava_java.data.model;
+package com.example.rxjava_java.data.source.local.model;
 
+import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -26,7 +27,7 @@ public class User {
     }
 
     @Ignore
-    public User(int id, String fullName, String email, String address, String url) {
+    public User(int id, String fullName, String email, String address, @Nullable String url) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;

@@ -1,1 +1,20 @@
-/build
+# Build files
+/build/
+/.gradle/
+/out/
+/target/
+
+# IDE config
+.idea/
+*.iml
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Local config
+local.properties
+*.keystore

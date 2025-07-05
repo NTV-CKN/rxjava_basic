@@ -1,9 +1,9 @@
 package com.example.rxjava_java.data.repository;
 
-import com.example.rxjava_java.data.model.User;
+import com.example.rxjava_java.data.source.local.model.User;
 
-import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.core.Completable;
 
 public interface IUserUpdate {
-    Single<Integer> updateUser(User user);
+    Completable updateUser(User user);
 }

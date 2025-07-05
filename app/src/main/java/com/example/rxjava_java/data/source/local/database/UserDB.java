@@ -1,4 +1,4 @@
-package com.example.rxjava_java.data.database;
+package com.example.rxjava_java.data.source.local.database;
 
 import android.content.Context;
 
@@ -6,12 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.rxjava_java.data.dao.UserDao;
-import com.example.rxjava_java.data.model.User;
+import com.example.rxjava_java.data.source.local.dao.UserDao;
+import com.example.rxjava_java.data.source.local.model.User;
 
 @Database(
         entities = {User.class},
-        exportSchema = true,
         version = 1
 )
 public abstract class UserDB extends RoomDatabase {

@@ -1,17 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Base.Theme.rx_room" parent="Theme.Material3.DayNight.NoActionBar">
-<!--                <item name="colorPrimary">@color/blue_700</item>-->
         <item name="toolbarStyle">@style/MyToolbarCustom</item>
         <item name="android:statusBarColor">@color/blue_700</item>
-<!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
-<!--        <item name="android:windowIsTranslucent">false</item>-->
     </style>
 
     <style name="MyToolbarCustom" parent="Widget.Material3.Toolbar">
         <item name="android:background">@color/blue_600</item>
+        <item name="titleTextColor">@color/white</item>
     </style>
 
-    <style name="Theme.rx_room" parent="Base.Theme.rx_room">
-    </style>
+    <style name="Theme.rx_room" parent="Base.Theme.rx_room"></style>
 </resources>
